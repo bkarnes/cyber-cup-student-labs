@@ -9,10 +9,11 @@ RUN apt-get update && \
 RUN useradd -m -s /bin/bash loguser && \
     echo "loguser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
+# Copy the script and set permissions while still root
+COPY fetch_logs.sh /home/loguser/
+RUN chmod +x /home/loguser/fetch_logs.sh
+
 USER loguser
 WORKDIR /home/loguser
-
-COPY fetch_logs.sh .
-RUN chmod +x fetch_logs.sh
 
 ENTRYPOINT ["./fetch_logs.sh"]
