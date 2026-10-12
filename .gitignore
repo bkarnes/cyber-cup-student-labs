@@ -1,0 +1,42 @@
+# General OS / editor / IDE artifacts
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+# IDE / editor specific
+.idea/
+.vscode/
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Virtual environment directories
+venv/
+.env/
+.env*/
+# Build / distribution
+build/
+.dist/
+*.egg-info/
+# C / C++ compiled objects
+*.o
+*.obj
+*.so
+*.dll
+*.exe
+# Logs
+*.log
+# Temporary files
+*.tmp
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+# Windows thumbnail cache files
+Thumbs.db
+# Linux
+*~
+# Others you may add as needed
