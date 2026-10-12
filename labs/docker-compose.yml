@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  # ---------- SMB ----------
+  smb:
+    build:
+      context: ./smb
+    container_name: blackhat_smb
+    networks:
+      - labnet
+    ports:
+      - "445:445"
+
+  # ---------- RDP ----------
+  rdp:
+    build:
+      context: ./rdp
+    container_name: blackhat_rdp
+    networks:
+      - labnet
+    ports:
+      - "3389:3389"
+
+  # ---------- LDAP ----------
+  ldap:
+    image: osixia/openldap:1.5.0
+    container_name: blackhat_ldap
+    environment:
+      LDAP_ORGANISATION: "Acme Corp"
+      LDAP_DOMAIN: "acme.local"
+      LDAP_ADMIN_PASSWORD: "adminpwd"
+    volumes:
+      - ./ldap/seed.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/seed.ldif:ro
+    networks:
+      - labnet
+    ports:
+      - "389:389"
+
+networks:
+  labnet:
+    driver: bridge

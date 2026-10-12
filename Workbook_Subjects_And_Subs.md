@@ -1,0 +1,1524 @@
+## CH01_Enumeration – Enumeration
+- Chapter 1: Enumeration
+- Why Enumeration Comes First
+- What You Will Learn
+- What Is a Port?
+- What Is Nmap?
+- The Nmap Commands You Will Use
+- Before You Start
+- Exercise 1.1: Basic Port Scan
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: What Does a Port Scan Actually Do?
+- Tool Primer: Your First Nmap Command
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify VPN Connectivity
+- Step 3: Run Your First Scan
+- Record Your Findings
+- Step 4: Interpret the Results
+- Step 5: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.2: Multiple Port Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why Scan All Ports?
+- Tool Primer: Full‑Range Scanning
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Default Scan First
+- Record Your Findings: Default Scan
+- Step 3: Run the Full‑Range Scan
+- Record Your Findings: Full‑Range Scan
+- Step 4: Compare the Two Scans
+- Step 5: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.3: Service Version Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: What Is Version Detection and Why Does It Matter?
+- Tool Primer: `nmap -sV`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Basic Scan as a Baseline
+- Record Your Findings: Basic Scan
+- Step 3: Run Version Detection
+- Step 4: Interpret the Results
+- Step 5: Retrieve the Flag
+- Record Your Findings: Version Comparison
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.4: OS Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: How Does OS Fingerprinting Work?
+- Tool Primer: `sudo nmap -O`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify Sudo Access
+- Step 3: Run the OS Detection Scan
+- Step 4: Interpret the Results
+- Step 5: Find the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.5: Comprehensive Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Combining Everything Into One Pass
+- Tool Primer: `nmap -A`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run the Full Scan
+- Step 3: Interpret the Port Table
+- Step 4: Review the Script Results
+- Step 5: Find the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH02_SMB_Reconnaissance – SMB Reconnaissance
+- Chapter 2: SMB Reconnaissance
+- Why SMB Reconnaissance Matters
+- What You Will Learn
+- What Is SMB?
+- Anonymous Access vs Null Sessions
+- The SMB Commands You Will Use
+- Before You Start
+- Exercise 2.1: SMB Connection Test
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Your First Direct Service Connection
+- Tool Primer: `smbclient`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify SMB Is Running
+- Step 3: Connect and List Shares
+- Step 4: Read the Output
+- Step 5: Record the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.2: SMB Share Listing
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Understanding Windows Share Types
+- Tool Primer: smbclient (Recap)
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: List All Shares
+- Step 3: Analyze Each Share
+- Step 4: Consider the Security Implications
+- Step 5: Record the Flag
+- Step 6: (Optional) Try Alternative Tools
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.3: Anonymous Share Access
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Anonymous Access: What It Means and Why It Is Dangerous
+- Tool Primer: smbclient Interactive Mode
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Public Share
+- Step 3: List the Contents
+- Step 4: Browse Directories
+- Step 5: Download the Flag
+- Step 6: Exit the Share
+- Step 7: Read the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.4: File Retrieval
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: From Browsing to Exfiltration
+- Tool Primer: File Download Commands
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Share
+- Step 3: List the Contents
+- Step 4: Download the File
+- Step 5: Exit the Session
+- Step 6: Read the Downloaded File
+- Step 7: (Alternative) Non‑Interactive Method
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.5: Null Session Connection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Null Sessions: A Different Kind of Anonymous Access
+- Tool Primer: `rpcclient`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Attempt a Null Session Connection
+- Step 3: Enumerate Server Information
+- Step 4: Enumerate Domain Information
+- Step 5: Disconnect
+- Step 6: Read the Flag from the Full Server String
+- Step 7: Submit the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.6: Null Session Share Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Enumerating Shares Through RPC vs SMB
+- Tool Primer: rpcclient Share Enumeration Commands
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Establish a Null Session
+- Step 3: Enumerate Shares
+- Step 4: Try Extended Enumeration
+- Step 5: Get Detailed Share Information
+- Step 6: Exit the Session
+- Step 7: Compare with smbclient
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.7: User Enumeration via Null Session
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why User Enumeration Is the Most Dangerous Null Session Capability
+- Tool Primer: rpcclient User Enumeration Commands
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Establish a Null Session
+- Step 3: Enumerate Users
+- Step 4: Query a Specific User
+- Step 5: Enumerate Groups
+- Step 6: Exit rpcclient
+- Step 7: Find the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.8: Comprehensive Null Session Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Automating Enumeration with enum4linux
+- Tool Primer: `enum4linux`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run the Full Enumeration
+- Step 3: Parse the Output Section by Section
+- Step 4: Find the Flag
+- Step 5: Compare Automated and Manual Results
+- Step 6: Document Your Findings
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH03_SMB_Credential_Attacks – SMB Credential Attacks
+- Chapter 3: SMB Credential Attacks
+- From Reconnaissance to Attack
+- What You Will Learn
+- What Is a Credential Attack?
+- How SMB Authentication Works
+- The Credential Attack Spectrum
+- Before You Start
+- Exercise 3.1: Manual Credential Test
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Understanding SMB Authentication
+- Tool Primer: SMB Authentication with smbclient
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify SMB Is Running
+- Step 3: Try Anonymous Access to the Private Share
+- Step 4: Test Credentials Against IPC$
+- Step 5: Connect to the Private Share
+- Step 6: List and Download the Flag
+- Step 7: Read the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 3.2: Multiple Credential Testing
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Scaling Up: From One Test to Many
+- Tool Primer: Bash `for` Loop for Credential Testing
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Create a Password List
+- Step 3: Run the Credential Testing Loop
+- Step 4: Review the Output
+- Step 5: Authenticate to the Private Share
+- Step 6: Download the Flag
+- Step 7: Read the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 3.3: Single User Brute Force
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Automated Brute Force Attacks
+- Tool Primer: `crackmapexec`
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Create a Wordlist
+- Step 3: Run CrackMapExec
+- Step 4: Read the Output
+- Step 5: Verify the Credentials
+- Step 6: Download the Flag
+- Step 7: Read the Flag
+- Step 8 (Optional): See Why Hydra Fails
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 3.4: Username Enumeration and Brute Force
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Two‑Phase Attack Chain
+- Tool Primer: Combining Existing Tools
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Enumerate Users (Phase 1)
+- Step 3: Parse the Output
+- Step 4: Extract Usernames to a File
+- Step 5: Verify the User List
+- Step 6: Create a Password Wordlist
+- Step 7: Brute Force with the User List (Phase 2)
+- Step 8: Identify the Valid Credentials
+- Step 9: Access the Private Share
+- Step 10: Download the Flag
+- Step 11: Read the Flag
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Exercise 3.5: Full Credential Attack
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Complete SMB Attack Chain
+- Tool Primer: Orchestration Workflow
+- Walkthrough
+- Phase 1: Service Discovery
+- Phase 2: Share Discovery
+- Phase 3: Anonymous Access Test
+- Phase 4: Null Session Enumeration
+- Phase 5: Username Extraction
+- Phase 6: Credential Attack
+- Phase 7: Authenticated Access
+- Record Your Findings
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH04_RDP_Exploitation – RDP Exploitation
+- Chapter 4: RDP Exploitation
+- Why RDP Matters
+- What Is RDP?
+- How RDP Differs from SMB
+- The RDP Attack Workflow
+- What Will You Learn?
+- Lab Progression
+- Before You Start
+- Exercise 4.1: RDP Service Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: RDP and Port 3389
+- Tool Primer: Nmap for RDP Detection
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Quick Port Check
+- Step 3: Run a Version Detection Scan
+- Step 4: Run a Full Scan
+- Step 5: Retrieve the Flag via SSH
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 4.2: RDP Version Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: RDP Security Layers
+- Tool Primer: Nmap NSE Scripts for RDP
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run the RDP Encryption Enumeration Script
+- Step 3: Run the NTLM Information Script
+- Step 4: Check the SSL Certificate
+- Step 5: Run All Scripts Together
+- Step 6: Understand BlueKeep Context
+- Step 7: Retrieve the Flag via SSH
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 4.3: RDP Manual Connection Test
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: How RDP Sessions Work
+- Tool Primer: xfreerdp
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify RDP Is Accessible
+- Step 3: Connect with xfreerdp
+- Step 4: Explore the Desktop
+- Step 5: Locate the Flag
+- Step 6: Enable Clipboard Sharing (if needed)
+- Step 7: Disconnect the Session
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 4.4: RDP Credential Guessing
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Manual Credential Guessing Strategy
+- Tool Primer: xfreerdp for Credential Testing
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify RDP Is Accessible
+- Step 3: Test Default Credentials
+- Step 4: Confirm the Successful Connection
+- Step 5: Record the Attempts
+- Step 6: Retrieve the Flag
+- Step 7: Disconnect
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 4.5: RDP Brute Force Attack
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Automated Brute Force with Hydra
+- Tool Primer: Hydra
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify RDP Is Accessible
+- Step 3: Create a Targeted Wordlist
+- Step 4: Run Hydra in Verbose Mode
+- Step 5: Identify the Valid Credentials
+- Step 6: Verify the Credentials
+- Step 7: Retrieve the Flag
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 4.6: RDP Session Access and Flag Retrieval
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Post‑Authentication RDP Capabilities
+- Tool Primer: xfreerdp Advanced Options
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Prepare the Local Share Directory
+- Step 3: Connect with Advanced Options
+- Step 4: Locate the Flag Visually
+- Step 5: Retrieve the Flag Using the Terminal (Method 1)
+- Step 6: Retrieve the Flag Using the File Manager (Method 2)
+- Step 7: Retrieve the Flag Using Drive Sharing (Method 3)
+- Step 8: Disconnect and Verify
+- Record Your Findings
+- Step 9: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH05_WinRM_Exploitation – WinRM Exploitation
+- CH05: WinRM Exploitation
+- Why WinRM Matters
+- What Is WinRM?
+- What Will You Learn?
+- Lab Progression
+- Attack Flow
+- Before You Start
+- Conventions Used in This Chapter
+- Exercise 5.1: WinRM Service Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: How WinRM Listens on the Network
+- Tool Primer: nmap
+- Walkthrough
+- Step 1: Verify Connectivity
+- Step 2: Scan for WinRM Ports
+- Step 3: Run a Script Scan
+- Step 3a: Confirm the WinRM Banner with curl
+- Step 4: Connect via SSH and Retrieve the Flag
+- Record Your Findings
+- Step 5: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 5.2: WinRM Version and Configuration Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: HTTP Headers and WinRM Configuration
+- Tool Primer: curl
+- Walkthrough
+- Step 1: Fetch Headers with curl
+- Step 2: Use Verbose Mode for Full Detail
+- Step 3: Enumerate Headers with nmap Scripts
+- Step 4: Check for HTTPS on Port 5986
+- Step 5: Connect and Retrieve the Flag
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 5.3: WinRM Manual Authentication
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: WinRM Authentication Methods
+- Tool Primer: Evil‑WinRM (Conceptual)
+- Walkthrough
+- Step 1: Attempt Authentication via curl
+- Step 2: Test with the SSH Service
+- Step 3: Confirm Access and Gather Context
+- Step 4: Retrieve the Flag
+- Step 5: Exit the Session
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 5.4: WinRM Credential Brute Force
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Brute‑Force Attacks and Wordlists
+- Tool Primer: Hydra
+- Walkthrough
+- Step 1: Create a Password Wordlist
+- Step 2: Verify the Wordlist
+- Step 3: Launch the Brute‑Force Attack
+- Step 4: Record the Discovered Credentials
+- Step 5: Authenticate with the Discovered Password
+- Step 6: Retrieve the Flag
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 5.5: WinRM Command Execution
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Post‑Authentication Enumeration
+- Tool Primer: System Enumeration Commands
+- Walkthrough
+- Step 1: Establish a Remote Session
+- Step 2: Identify the Current User
+- Step 3: Enumerate the System
+- Step 4: Examine Network Configuration
+- Step 5: List User Accounts
+- Step 6: Search for Sensitive Files
+- Step 7: Retrieve the Flag
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 5.6: WinRM File Retrieval
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Where Sensitive Files Hide
+- Tool Primer: find Command
+- Walkthrough
+- Step 1: Authenticate to the Target
+- Step 2: Check the Home Directory First
+- Step 3: Check Common Temporary Directories
+- Step 4: Search the Full Filesystem
+- Step 5: Retrieve the Flag
+- Step 6: Verify File Permissions
+- Step 7: Exit the Session
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- Self‑Assessment Questions
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+- Final Checklist
+
+## CH06_MSSQL_Exploitation – MSSQL Exploitation
+- Chapter 6: MS‑SQL Exploitation
+- Why Database Services Matter
+- What Is MS‑SQL?
+- How Database Attacks Differ from Other Services
+- What Will You Learn?
+- Key Terminology
+- Lab Progression
+- The Attack Path
+- Before You Start
+- Exercise 6.1: MS‑SQL Service Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Database Port Scanning
+- Tool Primer: Nmap Service Detection
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan for the Database Service
+- Step 3: Verify Connectivity with the MySQL Client
+- Step 4: Retrieve the Flag from the Database
+- Step 5: Verify the Flag on the File System
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.2: MS‑SQL Version and Instance Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: NSE Scripts for Database Enumeration
+- Tool Primer: Nmap NSE Script Execution
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run the mysql‑info Script
+- Step 3: Enumerate Usernames with mysql‑enum
+- Step 4: Run All MySQL NSE Scripts
+- Step 5: Connect and Retrieve the Flag
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.3: MS‑SQL Manual Authentication
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Database Authentication
+- Tool Primer: The mysql Command‑Line Client
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Attempt an Interactive Connection
+- Step 3: Verify Your Identity
+- Step 4: Check Your Privileges
+- Step 5: List Available Databases
+- Step 6: Retrieve the Flag
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.4: MS‑SQL Credential Brute Force
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Credential Brute Force Attacks
+- Tool Primer: Hydra
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Create a Password Wordlist
+- Step 3: Run Hydra Against the MySQL Service
+- Step 4: Record the Discovered Password
+- Step 5: Authenticate with the Discovered Credentials
+- Step 6: Retrieve the Flag
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.5: MS‑SQL Basic Query Execution
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: SQL Query Fundamentals
+- Tool Primer: Interactive MySQL Queries
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Database
+- Step 3: Enumerate All Databases
+- Step 4: Select the Target Database
+- Step 5: List All Tables
+- Step 6: Examine the Table Structure
+- Step 7: Extract the Flag Data
+- Step 8: Explore with Targeted Queries
+- Step 9: Exit the Session
+- Record Your Findings
+- Step 10: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.6: MS‑SQL xp_cmdshell Activation (MySQL LOAD_FILE equivalent)
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: From Database Access to Operating System Access
+- Tool Primer: LOAD_FILE() and INTO OUTFILE
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Database
+- Step 3: Check the secure_file_priv Configuration
+- Step 4: Read a Known System File
+- Step 5: Read the Flag File
+- Step 6: Confirm the Flag from the Database
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 6.7: MS‑SQL File System Access via LOAD_FILE (MySQL xp_cmdshell equivalent)
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Complete File System Exploitation Through a Database
+- Tool Primer: Systematic LOAD_FILE() Exploration
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Database
+- Step 3: Read the System Hostname
+- Step 4: Read the User Account List
+- Step 5: Read the Operating System Information
+- Step 6: Attempt to Read a Restricted File
+- Step 7: Read the MySQL Configuration
+- Step 8: Retrieve the Flag from the File System
+- Step 9: Confirm the Flag from the Database
+- Step 10: Exit the Session
+- Record Your Findings
+- Step 11: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH07_LDAP_Enumeration – LDAP Enumeration
+- Chapter 7: LDAP Enumeration
+- Why LDAP Matters
+- What Is LDAP?
+- How LDAP Relates to Active Directory
+- Distinguished Names (DNs)
+- What Will You Learn?
+- Lab Progression
+- Before You Start
+- Exercise 7.1: LDAP Service Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: LDAP Service Fingerprinting
+- Tool Primer: Nmap for LDAP
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan Port 389 with Version Detection
+- Step 3: Run LDAP NSE Scripts
+- Step 4: Identify Key Information
+- Record Your Findings
+- Step 5: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 7.2: LDAP Anonymous Bind Test
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Anonymous Binds
+- Tool Primer: ldapsearch
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Attempt an Anonymous Bind
+- Step 3: Analyze the Response
+- Step 4: Count the Results
+- Record Your Findings
+- Step 5: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 7.3: LDAP Base DN Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Root DSE and Base DN
+- Tool Primer: Querying the Root DSE
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Query the Root DSE
+- Step 3: Record the Base DN
+- Step 4: Verify the Base DN with a Directory Search
+- Step 5: Dump the Full Subtree to Find the Flag
+- Step 6: Understand the DN Components
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 7.4: LDAP User Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: LDAP Search Filters and User Objects
+- Tool Primer: ldapsearch with Filters and Attribute Selection
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Enumerate All Users
+- Step 3: Extract Specific Attributes
+- Step 4: Try an Alternative Filter
+- Step 5: Search for a Specific User
+- Step 6: Build a Username List
+- Step 7: Find the Flag in the Service Accounts OU
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 7.5: LDAP Group Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: LDAP Groups and Membership
+- Tool Primer: Querying Groups with ldapsearch
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Enumerate All Groups
+- Step 3: Try the groupOfNames Filter
+- Step 4: Identify the Administrative Group
+- Step 5: Map Users to Groups
+- Step 6: Cross‑Reference with User Data
+- Step 7: Find the Flag with a Full‑Subtree Search
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 7.6: LDAP Comprehensive Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The LDAP Enumeration Methodology
+- Tool Primer: Full Directory Dump and Nmap LDAP Scripts
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Detect the LDAP Service
+- Step 3: Confirm Anonymous Bind Access
+- Step 4: Discover the Base DN from Root DSE
+- Step 5: Enumerate Organizational Units
+- Step 6: Extract All User Accounts
+- Step 7: Map All Group Memberships
+- Step 8: Perform a Full Directory Dump
+- Record Your Findings
+- Step 9: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Key Concepts Reference
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH08_Credential_Reuse – Credential Reuse
+- Chapter 8: Credential Reuse
+- What Is Credential Reuse?
+- Why Attackers Care
+- What You Will Learn
+- What Makes Credential Reuse Different from Brute Force?
+- The Tools You Will Use
+- Lab Progression
+- Before You Start
+- Exercise 8.1: Single Service Credential Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Credential Discovery
+- Tool Primer: smbclient
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan Port 445
+- Step 3: List SMB Shares with Credentials
+- Step 4: Explore share1
+- Step 5: Explore share2 and Find the Flag
+- Record Your Findings
+- Step 6: Interpret the Results
+- Step 7: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 8.2: Cross‑Service Credential Reuse
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Cross‑Service Credential Reuse
+- Tool Primer: CrackMapExec
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan Ports 22, 445, and 3389
+- Step 3: Verify Credentials on SMB with CrackMapExec
+- Step 4: Verify Credentials on RDP with CrackMapExec
+- Step 5: Enumerate SMB Shares
+- Step 6: Connect via SSH to Retrieve the Flag
+- Record Your Findings
+- Step 7: Interpret the Results
+- Step 8: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 8.3: Multi‑Service Credential Reuse
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why Multi‑Service Credential Reuse Amplifies Risk
+- Tool Primer: CrackMapExec Multi‑Protocol Syntax
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan for Open Services
+- Step 3: Test Credentials on SMB
+- Step 4: Test Credentials on RDP
+- Step 5: Test Credentials on SSH
+- Step 6: Enumerate SMB Shares
+- Record Your Findings
+- Step 7: Interpret the Results
+- Step 8: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 8.4: Credential Discovery and Reuse Chain
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Credential Chain
+- Tool Primer: ldapsearch
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan for Open Services
+- Step 3: Enumerate LDAP Anonymously with ldapsearch
+- Step 4: Use enum4linux for Full Enumeration
+- Step 5: Test Discovered Credentials on SMB
+- Step 6: Test Credentials on LDAP
+- Step 7: Test Credentials on RDP
+- Record Your Findings
+- Step 8: Interpret the Results
+- Step 9: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 8.5: CME Credential Reuse Automation
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why Credential Automation Matters
+- Tool Primer: CrackMapExec
+- Walkthrough
+- Step 1: Launch the Exercise and Note All Target IPs
+- Step 2: Scan All Targets to Confirm Services
+- Step 3: Test SMB Credentials on target1 with CME
+- Step 4: Test RDP Credentials on target2 with CME
+- Step 5: Test SSH Credentials on target3 with CME
+- Step 6: Enumerate SMB Shares on target1
+- Record Your Findings
+- Step 7: Interpret the Results
+- Step 8: Find and Submit the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH09_Assessment – Assessment
+- Chapter 9: Network Assessment
+- What Is Network Assessment?
+- Why Attackers Care
+- What You Will Learn
+- The Tools You Will Use
+- Lab Progression
+- Before You Start
+- Exercise 9.1: Windows Network Assessment
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Network Assessment Methodology
+- Tool Primer: Anonymous SMB Access
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Full Service Scan
+- Step 3: Enumerate SMB Shares Anonymously
+- Step 4: Map Share Permissions
+- Step 5: Access the Public Share
+- Step 6: Run Full SMB Enumeration
+- Record Your Findings
+- Step 7: Retrieve the Flag via HTTP
+- Step 8: Interpret the Results
+- Analysis Questions
+- Key Takeaways
+- Exercise 9.2: Multi‑Service Exploitation
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Multi‑Service Exploitation
+- Tool Primer: CrackMapExec Multi‑Protocol Testing
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Full Service Scan
+- Step 3: Test Credentials on SMB
+- Step 4: Test Credentials on SSH
+- Step 5: Test Credentials on RDP
+- Step 6: Enumerate Authenticated SMB Shares
+- Record Your Findings
+- Step 7: Connect via SSH and Retrieve the Flag
+- Step 8: Interpret the Results
+- Analysis Questions
+- Key Takeaways
+- Exercise 9.3: Complete Windows Penetration Test
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Penetration Testing Methodology
+- Tool Primer: enum4linux Comprehensive Enumeration
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Conduct Full Reconnaissance
+- Step 3: Perform Null Session Enumeration
+- Step 4: List Shares Anonymously
+- Step 5: Test Credentials on All Services
+- Step 6: Enumerate Authenticated SMB Shares
+- Record Your Findings
+- Step 7: Connect via SSH and Retrieve the Flag
+- Step 8: Document Your Findings
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_LIN01_Linux_Service_Enumeration – Linux Service Enumeration
+- Chapter L1: Linux Service Enumeration
+- Why Linux Enumeration Comes First
+- What You Will Learn
+- What Are Linux Services?
+- What Is Nmap?
+- The Nmap Commands You Will Use
+- Before You Start
+- Exercise L1.1: SSH Service Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: How SSH Works
+- Tool Primer: Nmap Version Scan
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Verify Connectivity
+- Step 3: Run a Targeted SSH Scan
+- Step 4: Read the Output
+- Step 5: Understand What Happened
+- Step 6: Save Your Output (Optional)
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L1.2: Multi‑Service Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Multiple Services on One Host
+- Tool Primer: Nmap Default Scan and FTP Client
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Broad Service Scan
+- Step 3: Review the Results
+- Step 4: Connect to FTP with Anonymous Login
+- Step 5: Inspect the HTTP Service
+- Step 6: Combine the Flag
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L1.3: Service Interaction
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Service Banners and Why Scanners Truncate Them
+- Tool Primer: FTP Client and Banner Grabbing
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan with Nmap First
+- Step 3: Connect with the FTP Client
+- Step 4: Try Banner Grabbing with Netcat
+- Step 5: Compare the Results
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L1.4: Non‑Standard Port Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Security Through Obscurity
+- Tool Primer: Full Port Scan
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Try a Default Scan First
+- Step 3: Run a Full Port Scan
+- Step 4: Inspect the HTTP Service
+- Step 5: Connect to SSH on the Non‑Standard Port
+- Record Your Findings
+- Step 6: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L1.5: NSE Script Enumeration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Nmap Scripting Engine
+- Tool Primer: NSE Script Syntax
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Baseline Version Scan
+- Step 3: Enumerate SSH Host Keys
+- Step 4: Enumerate Authentication Methods
+- Step 5: Enumerate Encryption Algorithms
+- Step 6: Run All Three Scripts Together
+- Record Your Findings
+- Step 7: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L1.6: Version‑Specific Vulnerability Identification
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: From Version Strings to Exploits
+- Tool Primer: searchsploit
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Run a Version Detection Scan
+- Step 3: Read the FTP Welcome Banner
+- Step 4: Research the Version with searchsploit
+- Step 5: Get the ExploitDB URL
+- Step 6: Review the Vulnerability Details
+- Step 7: Verify the Flag
+- Record Your Findings
+- Step 8: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Key Concepts Revisited
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_LIN02_SSH_Authentication – SSH Authentication
+- Chapter L2: SSH Authentication & Discovery
+- Why SSH Authentication Matters
+- What You Will Learn
+- What Is SSH Authentication?
+- How SSH Differs from Scanning
+- The SSH Attack Workflow
+- Before You Start
+- Exercise L2.1: SSH Basic Login
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Message of the Day (MOTD)
+- Tool Primer: SSH Client
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect via SSH
+- Step 3: Read the MOTD
+- Step 4: Extract System Information
+- Step 5: Review the MOTD Configuration
+- Step 6: Document Your Findings
+- Record Your Findings
+- Step 7: Record the Flag
+- Step 8: Disconnect
+- Analysis Questions
+- Key Takeaways
+- Exercise L2.2: SSH User Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Post‑Authentication User Enumeration
+- Tool Primer: User Enumeration Commands
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Authenticate as jmitchell
+- Step 3: Identify Your User Context
+- Step 4: Check Sudo Permissions
+- Step 5: Explore the Home Directory
+- Step 6: Locate Database Credentials
+- Step 7: Discover SSH Keys
+- Step 8: Capture the Flag
+- Record Your Findings
+- Step 9: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L2.3: SSH File Discovery
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: File System Exploration Beyond Home
+- Tool Primer: The `find` Command
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Authenticate as webadmin
+- Step 3: Navigate to the Web Application Root
+- Step 5: Search for Configuration Files
+- Step 6: Locate Environment Files
+- Step 7: Discover Backup Files
+- Step 8: Search for Credentials with grep
+- Step 9: Capture the Flag
+- Record Your Findings
+- Step 10: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_LIN03_SSH_Post_Exploitation – SSH Post‑Exploitation
+- Chapter L3: SSH Post‑Exploitation & Privilege Escalation
+- Why Post‑Exploitation Matters
+- What You Will Learn
+- What Is Post‑Exploitation?
+- The Post‑Exploitation Workflow
+- Before You Start
+- Exercise L3.1: SSH Command Execution
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: System Enumeration
+- Tool Primer: Linux Enumeration Commands
+- Walkthrough
+- Step 1: Launch the Exercise and Note Your Target
+- Step 2: Authenticate via SSH
+- Step 3: Identify the Operating System
+- Step 4: Map the Network Position
+- Step 5: Enumerate Running Processes
+- Step 6: Identify Listening Services
+- Step 7: Inspect Environment Variables
+- Step 8: Execute the Custom Admin Script
+- Step 9: Exit the Session
+- Record Your Findings
+- Step 10: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L3.2: SSH History Analysis
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why History Files Leak Secrets
+- Tool Primer: History File Analysis Commands
+- Walkthrough
+- Step 1: Launch the Exercise and Note Your Target
+- Step 2: Authenticate as the Developer
+- Step 3: List Available History Files
+- Step 4: Analyze Bash History
+- Step 5: Search for Credentials in Bash History
+- Step 6: Search for API Keys and Tokens
+- Step 7: Extract Internal IP Addresses
+- Step 8: Analyze MySQL History
+- Step 9: Analyze Python History
+- Step 10: Compile a Connection Map
+- Step 11: Exit the Session
+- Record Your Findings
+- Step 12: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise L3.3: SSH Privilege Escalation
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Sudo Misconfigurations
+- Tool Primer: sudo
+- Walkthrough
+- Step 1: Launch the Exercise and Note Your Target
+- Step 2: Authenticate as the Backup User
+- Step 3: Enumerate Sudo Permissions
+- Step 4: Browse the Root Home Directory
+- Step 5: Read the Root Flag
+- Step 6: Extract Password Hashes from /etc/shadow
+- Step 7: Steal the Root SSH Private Key
+- Step 8: Verify the Escalation Path
+- Step 9: Exit the Session
+- Record Your Findings
+- Step 10: Record the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_NET01_Log_Analysis – Log Analysis
+- Chapter N1: Log Analysis
+- Why Log Analysis Matters
+- What You Will Learn
+- The Analyst's Toolkit
+- How the Labs Are Structured
+- Lab Overview
+- The MediCare Scenario
+- Before You Start
+- Exercise 1.1: Port Scan Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: What Is a Port Scan?
+- Tool Primer: The Unix Log Analysis Pipeline
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Download the Firewall Log
+- Step 3: Examine the Log Format
+- Step 4: Count Connection Attempts per Source IP
+- Step 5: Analyze the Suspicious IP
+- Step 6: Count Unique Ports Scanned
+- Step 7: Find the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.2: HTTP Traffic Analysis
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: HTTP vs HTTPS
+- Tool Primer: tshark
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Download the Packet Capture
+- Step 3: Get a Protocol Overview
+- Step 4: Filter for HTTP Traffic
+- Step 5: Find POST Requests
+- Step 6: Extract the Credentials
+- Step 7: Follow the TCP Stream
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.3: DNS Anomaly Detection
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: DNS as an Attack Channel
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Download the DNS Log
+- Step 3: Examine the Log Format
+- Step 4: Count Queries per Domain
+- Step 5: Analyze the Suspicious Domain
+- Step 6: Identify the Infected Workstation
+- Step 7: Find the Flag
+- Analysis Questions
+- Key Takeaways
+- Exercise 1.4: Failed Login Analysis
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: SSH Brute‑Force Attacks
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Download the Auth Log
+- Step 3: Count Total Failed Attempts
+- Step 4: Count Failures per Source IP
+- Step 5: Analyze the Attacker's Attempts
+- Step 6: Verify No Successful Login
+- Step 7: Find the Flag
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_NET02_PCAP_Forensics – PCAP Forensics
+- Chapter N2: PCAP Forensics
+- Why PCAP Forensics Matters
+- What You Will Learn
+- How the Labs Work
+- Connection Details
+- Lab Progression
+- Lab Overview
+- The MediCare Scenario Continues
+- Before You Start
+- Exercise 2.1: FTP Credential Extraction
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Why FTP Is Dangerous
+- Tool Primer: FTP Display Filters in tshark
+- Walkthrough
+- Step 1: Launch the Exercise and Note Your Target IP
+- Step 2: SSH into the Analyst Workstation
+- Step 3: Locate the PCAP File
+- Step 4: Get a Protocol Overview
+- Step 5: Find the Successful Login
+- Step 6: Extract the Credentials
+- Step 7: Follow the TCP Stream
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.2: SMTP Email Analysis
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: SMTP and Email Exfiltration
+- Tool Primer: SMTP Display Filters in tshark
+- Walkthrough
+- Step 1: Launch the Exercise and Note Your Target IP
+- Step 2: SSH into the Analyst Workstation and Obtain the PCAP
+- Step 3: Get a Protocol Overview
+- Step 4: List All SMTP Senders and Recipients
+- Step 5: Identify External Recipients
+- Step 6: Find the TCP Stream Number for the Suspicious Email
+- Step 7: Follow the Stream to Read the Full Email
+- Step 8: Document the Evidence
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.3: HTTP Session Hijacking
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: HTTP Session Management and Hijacking
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Connect to the Analysis Container
+- Step 3: Get a Protocol Overview
+- Step 4: Find Set‑Cookie Headers
+- Step 5: Track All Cookie Usage
+- Step 6: Identify the Hijacking
+- Step 7: Examine What the Attacker Accessed
+- Step 8: Follow the Attacker's TCP Stream
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.4: DNS Data Exfiltration
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: DNS Tunneling
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: SSH into the Container
+- Step 3: Get a Protocol Overview
+- Step 4: List DNS Queries and Count by Domain
+- Step 5: Filter for the Suspicious Domain
+- Step 6: Check for Long Query Names
+- Step 7: Extract the Subdomain Portions
+- Step 8: Decode the Exfiltrated Data
+- Step 9: Read the Decoded Output
+- Analysis Questions
+- Key Takeaways
+- Exercise 2.5: Attack Chain Analysis
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: The Cyber Kill Chain
+- Walkthrough
+- Stage 1: Initial Assessment
+- Stage 2: Initial Access
+- Stage 3: Command and Control
+- Stage 4: Credential Harvesting
+- Stage 5: Lateral Movement
+- Stage 6: Data Exfiltration
+- Complete Attack Timeline
+- Analysis Questions
+- Key Takeaways
+- Subject Review
+- What You Learned
+- The Progression You Followed
+- Self‑Assessment
+- Command Cheat Sheet
+- General tshark commands
+- Protocol‑specific filters
+- Useful filter combinations
+- Recommended analysis order
+- Connect the Dots: What Comes Next
+- Self‑Assessment Answer Key
+
+## CH_NETSY12_Firewalls – Firewalls
+- Exercise 12.1: Firewall Fundamentals - Controlling Inbound Traffic
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: What Is a Firewall?
+- The Anatomy of an iptables Rule
+- Tool Primer: iptables Commands
+- Walkthrough
+- Step 1: Launch the Exercise
+- Step 2: Scan the Network
+- Step 3: SSH into the Firewall
+- Step 4: Observe the Traffic (Before Rules)
+- Step 5: Check Current Firewall Rules
+- Step 6: Write Your First Rule - Allow HTTP
+- Step 7: Allow HTTPS
+- Step 8: Block Everything Else
+- Step 9: Verify with the Monitor (After Rules)
+- Step 10: Inspect the Packet Counters
+- Step 11: Validate and Get the Flag
+- Analysis Questions
+- Record Your Findings
+- Exercise 12.2: Firewall Policy Hardening - Defense in Depth
+- Before You Begin
+- Scenario
+- Your Objectives
+- Background: Reactive vs. Proactive Firewall Policies
+- Approach 1: Reactive (Blocklist)
+- Everything else is allowed by the default ACCEPT policy
+- Approach 2: Proactive (Allowlist / Default Deny)
+- New Concept: Source‑Specific Rules (-s flag)
+- The Rule Order Trap
+- Walkthrough
+- Phase 1: Source‑Specific Blocking (Reinforcement)
+- Step 1: Launch and Connect
+- Step 2: Observe Current Traffic
+- Step 3: Write Source‑Specific DROP Rules
+- Step 4: Verify Phase 1 with the Monitor
+- Phase 2: General Default‑Deny Policy
+- Step 5: Flush the Phase 1 Rules
+- Step 6: Write the Default‑Deny Policy
+- Step 7: Verify the General Policy with the Monitor
+- Step 8: Read and Understand the Rule Table
+- (Optional) Step 9: Experience the Rule Order Trap
+- Step 10: Validate and Get the Flag
+- Analysis Questions
+- ...

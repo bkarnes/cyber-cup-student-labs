@@ -1,0 +1,14 @@
+dn: ou=people,dc=acme,dc=local
+objectClass: organizationalUnit
+ou: people
+
+# User that matches the SMB/RDP password
+# The password is stored as a SHA-1 hash (base64 of {SHA}Password123)
+# The hash for "Password123" is "{SHA}VZ3F3lfAvgcG9B6nBTTLBg=="
+
+dn: uid=smbuser,ou=people,dc=acme,dc=local
+objectClass: inetOrgPerson
+uid: smbuser
+sn: User
+cn: SMB User
+userPassword:: e1NIQXlvcjEyMw==
