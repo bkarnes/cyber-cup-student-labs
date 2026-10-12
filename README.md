@@ -1,7 +1,10 @@
-# Windows Penetration Testing: Student Workbook
+# Penetration Testing: Student Workbook
+## Workbook Source:
+This workbook information is pulled out of the OpenCyberRange (https://github.com/syntaxoverride/opencyberrange/) repo as I didn't have a server large enough to run the entire range.  I have compared the information within the workbook and have tried to utilize the excellent docker-based Black Hat Bash labs (https://github.com/dolevf/Black-Hat-Bash) as backend for some of the exercises.
 
-## What Is a Workbook?
+WIth that said, the user will need to clone the BHB repo and have it ready for some of the chapters and then there are new labs tied to this repo that will cover the rest.
 
+## What Is in the Workbook?
 The workbook now includes three additional lab services that are required for the **Network Analysis**, **PCAP Forensics**, and **Firewall** chapters:
 
 - **Log Collector** (`blackhat_log_collector`): pulls `/var/log/` from each Black‑Hat‑Bash service container into a shared volume so CH_NET01 can analyse real log files.
