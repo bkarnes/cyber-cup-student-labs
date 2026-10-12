@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-You should have read the Chapter 1 Introduction, which explains what ports are, why enumeration matters, and what Nmap does at a high level. Your VPN must be connected and your terminal open. No prior scanning experience is required; the walkthrough starts from zero.
+You should have read the Chapter 1 Introduction, which explains what ports are, why enumeration matters, and what Nmap does at a high level. Your Docker lab environment is running and your terminal is open. No prior scanning experience is required; the walkthrough starts from zero.
 
 ## Scenario
 

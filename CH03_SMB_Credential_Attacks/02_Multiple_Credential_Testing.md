@@ -4,7 +4,7 @@
 
 In Exercise 3.1, you tested a single username-password pair. That worked because the password was obvious. In practice, you rarely guess the right password on the first try. this exercise teaches you to script multiple password tests using bash loops; a skill that applies to any protocol, not just SMB.
 
-Your VPN must be connected and your terminal open. You should be comfortable with the `smbclient` syntax from Exercise 3.1 before continuing.
+Your Docker lab environment is running and your terminal is open. You should be comfortable with the `smbclient` syntax from Exercise 3.1 before continuing.
 
 ## Scenario
 

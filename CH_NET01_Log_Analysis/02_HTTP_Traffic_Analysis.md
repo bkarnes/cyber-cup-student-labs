@@ -92,7 +92,7 @@ tshark -r capture.pcap -q -z follow,tcp,ascii,0
 
 ### Step 1: Launch the Exercise
 
-In the Open Cyber Range interface, navigate to **Network -> Level 1 -> HTTP Traffic Analysis** and start the lab. Wait until the status indicator shows **Running**, then note the target IP displayed on the lab page. You will substitute this value wherever you see `<target_ip>` in the commands below.
+In the Black Hat Bash lab environment, navigate to **Network -> Level 1 -> HTTP Traffic Analysis** and start the lab. Wait until the status indicator shows **Running**, then note the target IP displayed on the lab page. You will substitute this value wherever you see `<target_ip>` in the commands below.
 
 ### Step 2: Download the Packet Capture
 

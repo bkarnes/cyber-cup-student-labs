@@ -4,7 +4,7 @@
 
 In Exercise 3.3, you brute-forced the "admin" account; but someone told you the username was "admin." In a real penetration test, nobody hands you a username list. You have to find the usernames yourself. this exercise combines two skills you already have: user enumeration from Chapter 2 and brute force from Exercise 3.3. The result is a two-phase attack chain that mirrors real-world methodology.
 
-Your VPN must be connected and your terminal open. You should be comfortable with `rpcclient` enumeration (Chapter 2) and CrackMapExec brute force (Exercise 3.3) before continuing.
+Your Docker lab environment is running and your terminal is open. You should be comfortable with `rpcclient` enumeration (Chapter 2) and CrackMapExec brute force (Exercise 3.3) before continuing.
 
 ## Scenario
 

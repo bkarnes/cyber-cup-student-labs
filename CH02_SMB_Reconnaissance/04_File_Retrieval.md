@@ -4,7 +4,7 @@
 
 In Exercise 2.3, you connected to an anonymous share and browsed its contents. You saw file names and directories; but seeing a file name and having the file on your machine are two different things. In a penetration test, downloading files is how you prove impact. this exercise focuses on the mechanics of extracting files from SMB shares.
 
-Your VPN must be connected and your terminal open. You should be comfortable connecting to SMB shares and navigating them interactively from the previous exercise.
+Your Docker lab environment is running and your terminal is open. You should be comfortable connecting to SMB shares and navigating them interactively from the previous exercise.
 
 ## Scenario
 

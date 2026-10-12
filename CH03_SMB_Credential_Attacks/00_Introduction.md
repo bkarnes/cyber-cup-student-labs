@@ -87,7 +87,7 @@ Chapter 3 builds directly on the skills and output from Chapter 2. Make sure the
 - [ ] You know how to list shares with `smbclient -L`
 - [ ] You know how to enumerate users with `rpcclient` or `enum4linux`
 - [ ] You understand the target's password policy (discovered in Chapter 2)
-- [ ] Your VPN is connected and your terminal is open
+- [ ] Your Docker lab environment is running and your terminal is open
 - [ ] You have a Kali Linux terminal with CrackMapExec installed (pre-installed on most Kali builds)
 - [ ] You have verified connectivity to the target by pinging it or running a quick Nmap scan
 

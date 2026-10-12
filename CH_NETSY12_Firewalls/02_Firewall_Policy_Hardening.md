@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-You should have completed Exercise 12.1 (Firewall Fundamentals). Exercise 12.2 builds on the same scenario and topology. You will write iptables rules independently in Phase 1 (reinforcing what you learned), then learn new concepts about policy design and rule order in Phase 2. Your VPN must be connected and your terminal open.
+You should have completed Exercise 12.1 (Firewall Fundamentals). Exercise 12.2 builds on the same scenario and topology. You will write iptables rules independently in Phase 1 (reinforcing what you learned), then learn new concepts about policy design and rule order in Phase 2. Your Docker lab environment is running and your terminal is open.
 
 **Credentials for this exercise:**
 

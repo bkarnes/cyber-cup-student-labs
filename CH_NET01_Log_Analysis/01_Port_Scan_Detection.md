@@ -4,7 +4,7 @@
 
 Exercise 1.1 is the first exercise in the Network Log Analysis track. Before you start, confirm the following:
 
-- Your VPN connection to the lab environment is active.
+- Your Docker lab environment is running and your terminal is open
 - You have a terminal open and ready for command input.
 - You can reach exercise targets by pinging the gateway or running a quick connectivity check.
 
@@ -69,7 +69,7 @@ The full pipeline concept is: **download -> filter -> extract -> count -> rank**
 
 ### Step 1: Launch the Exercise
 
-In the Open Cyber Range interface, navigate to **Network -> Level 1 -> Port Scan Detection** and start the lab. Wait until the status indicator shows **Running**, then note the target IP displayed on the lab page. You will substitute this value wherever you see `<target_ip>` in the commands below.
+In the Black Hat Bash lab environment, navigate to **Network -> Level 1 -> Port Scan Detection** and start the lab. Wait until the status indicator shows **Running**, then note the target IP displayed on the lab page. You will substitute this value wherever you see `<target_ip>` in the commands below.
 
 ### Step 2: Download the Firewall Log
 

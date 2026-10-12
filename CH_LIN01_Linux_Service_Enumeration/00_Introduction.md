@@ -82,7 +82,7 @@ Notice the progression: each exercise asks a deeper question about the same type
 
 Confirm the following before launching your first exercise:
 
-- [ ] VPN connection to the lab environment is active
+- [ ] Docker lab environment is running and your terminal is open
 - [ ] Terminal open and ready for commands
 - [ ] Nmap installed and accessible (type `nmap --version` to confirm)
 - [ ] FTP client available (type `ftp --help` to confirm)

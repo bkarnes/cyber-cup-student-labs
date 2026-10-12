@@ -82,8 +82,8 @@ investigation.
 
 Confirm the following before beginning any lab in this chapter:
 
-- [ ] Logged into the Open Cyber Range platform
-- [ ] VPN connected and verified
+- [ ] Working locally with the Black‑Hat‑Bash lab containers (no external platform login required)
+- [ ] Docker environment is running (`docker compose up -d`) and your terminal is open
 - [ ] Terminal open (Kali Linux recommended)
 - [ ] tshark installed (`tshark --version` to verify)
 

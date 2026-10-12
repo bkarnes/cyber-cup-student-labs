@@ -4,7 +4,7 @@
 
 ## Before You Begin
 
-You should be comfortable with basic Linux commands and SSH. Your VPN must be connected and your terminal open. The exercise introduces firewall concepts from the operator's perspective: you will be working directly on the firewall, not attacking it.
+You should be comfortable with basic Linux commands and SSH. Your Docker lab environment is running and your terminal is open. The exercise introduces firewall concepts from the operator's perspective: you will be working directly on the firewall, not attacking it.
 
 
 **Credentials for this exercise:**

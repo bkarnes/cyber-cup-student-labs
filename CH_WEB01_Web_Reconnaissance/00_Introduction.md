@@ -85,7 +85,7 @@ Notice the progression: each lab asks a different question about the same type o
 
 Confirm the following before launching your first lab:
 
-- [ ] VPN connection to the lab environment is active
+- [ ] Docker lab environment is running
 - [ ] Terminal open and ready for commands
 - [ ] Gobuster installed and accessible (type `gobuster --help` to confirm)
 - [ ] curl installed and accessible (type `curl --version` to confirm)

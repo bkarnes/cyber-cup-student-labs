@@ -72,7 +72,7 @@ Make sure the following are in place before beginning Exercise 9.1:
 - [ ] You are comfortable with `smbclient`, `smbmap`, and `enum4linux` from previous chapters
 - [ ] You understand how CrackMapExec tests credentials across multiple protocols
 - [ ] You know the basics of SSH and RDP connectivity
-- [ ] Your VPN is connected and your terminal is open
+- [ ] Your Docker lab environment is running and your terminal is open
 - [ ] You have a Kali Linux terminal with nmap, smbclient, smbmap, enum4linux, crackmapexec, curl, and ssh available
 - [ ] You have verified connectivity to the target by pinging it or running a quick Nmap scan
 

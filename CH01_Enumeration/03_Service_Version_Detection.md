@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-In Exercise 1.2, you scanned all 65,535 ports and found services the default scan missed. But the SERVICE column was still just a guess based on port numbers; Nmap had not actually confirmed what was running. this exercise teaches you to interrogate each open port and identify the exact software and version behind it. Your VPN must be connected and your terminal open.
+In Exercise 1.2, you scanned all 65,535 ports and found services the default scan missed. But the SERVICE column was still just a guess based on port numbers; Nmap had not actually confirmed what was running. this exercise teaches you to interrogate each open port and identify the exact software and version behind it. Your Docker lab environment is running and your terminal is open.
 
 ## Scenario
 

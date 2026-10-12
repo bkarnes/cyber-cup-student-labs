@@ -4,7 +4,7 @@
 
 In Exercise 2.2, you listed the shares on the target and noted their names and types. But listing shares and accessing them are two different things. A share might appear in the listing but reject your connection when you try to open it. this exercise tests whether you can actually browse the contents of a share without providing any credentials.
 
-Your VPN must be connected and your terminal open. You should be comfortable listing shares with `smbclient -L` from the previous exercise.
+Your Docker lab environment is running and your terminal is open. You should be comfortable listing shares with `smbclient -L` from the previous exercise.
 
 ## Scenario
 

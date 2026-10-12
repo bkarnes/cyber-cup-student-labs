@@ -58,7 +58,7 @@ Each lab expands the scope of your discovery. Exercise L2.1 focuses on the login
 Before beginning the labs in this chapter, confirm the following:
 
 - [ ] Completed all three labs in Chapter L1 (Network Scanning)
-- [ ] Connected to the lab environment VPN
+- [ ] Docker lab environment is running and your terminal is open
 - [ ] Terminal open with SSH client available (verify with `ssh -V`)
 - [ ] Notebook ready to record credentials, flags, and findings
 - [ ] Familiar with basic Linux commands: `ls`, `cat`, `cd`, `pwd`

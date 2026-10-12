@@ -119,7 +119,7 @@ When you open any new PCAP file, follow this sequence:
 
 ## Connect the Dots: What Comes Next
 
-Chapters N1 and N2 covered the Network track of the Open Cyber Range. You now have a complete defensive analysis skillset: text log analysis (firewall, DNS, auth logs) and packet capture forensics (FTP, SMTP, HTTP, DNS, and multi-protocol attack chains). These skills form the foundation of SOC analyst and incident responder roles.
+Chapters N1 and N2 covered the Network track of the Black Hat Bash labs. You now have a complete defensive analysis skillset: text log analysis (firewall, DNS, auth logs) and packet capture forensics (FTP, SMTP, HTTP, DNS, and multi-protocol attack chains). These skills form the foundation of SOC analyst and incident responder roles.
 
 The techniques you practiced; filtering, field extraction, stream following, and timeline reconstruction; apply to any protocol and any investigation. Whether you encounter a novel C2 channel, an unfamiliar application-layer protocol, or a zero-day exploit in transit, the analytical framework remains the same: identify endpoints, follow conversations, extract artifacts, and reconstruct the timeline.
 
@@ -132,7 +132,7 @@ In a real SOC environment, you combine both skillsets simultaneously:
 
 When you correlate all four data sources, you can reconstruct an incident from first contact to final exfiltration with forensic-grade evidence.
 
-The next tracks in the Open Cyber Range build on this network foundation. You will encounter host-based forensics, memory analysis, and incident response scenarios that reference the same attacker techniques you detected in network traffic here. The ability to pivot between network evidence and host evidence is what separates a capable analyst from an exceptional one.
+The next tracks in the Black Hat Bash labs build on this network foundation. You will encounter host-based forensics, memory analysis, and incident response scenarios that reference the same attacker techniques you detected in network traffic here. The ability to pivot between network evidence and host evidence is what separates a capable analyst from an exceptional one.
 
 ## Self-Assessment Answer Key
 

@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-Over the past four labs, you built up individual scanning capabilities one at a time: basic port scanning, full-range discovery, version detection, and OS fingerprinting. Each lab added one layer. Exercise 1.5 combines everything into a single full scan; the way experienced penetration testers actually work. Your VPN must be connected and your terminal open. You need root privileges (`sudo`) because the scan includes OS fingerprinting.
+Over the past four labs, you built up individual scanning capabilities one at a time: basic port scanning, full-range discovery, version detection, and OS fingerprinting. Each lab added one layer. Exercise 1.5 combines everything into a single full scan; the way experienced penetration testers actually work. Your Docker lab environment is running and your terminal is open. You need root privileges (`sudo`) because the scan includes OS fingerprinting.
 
 ## Scenario
 

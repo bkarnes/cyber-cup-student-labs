@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-- Confirm your VPN connection to the lab environment is active
+- Confirm your Docker lab environment is running
 - Open a terminal window with SSH client available
 - Complete Exercises L2.1 and L2.2 before starting
 

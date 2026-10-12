@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-Exercise 9.1 covered anonymous enumeration and Exercise 9.2 demonstrated authenticated credential reuse. Exercise 9.3 brings everything together into a complete penetration test; starting with zero knowledge, discovering information through null sessions, testing credentials across all services, and documenting the full attack chain. Make sure you are comfortable with `enum4linux`, `smbclient`, `smbmap`, CrackMapExec (CME), and SSH from previous labs. Your VPN must be connected and your Kali terminal ready.
+Exercise 9.1 covered anonymous enumeration and Exercise 9.2 demonstrated authenticated credential reuse. Exercise 9.3 brings everything together into a complete penetration test; starting with zero knowledge, discovering information through null sessions, testing credentials across all services, and documenting the full attack chain. Make sure you are comfortable with `enum4linux`, `smbclient`, `smbmap`, CrackMapExec (CME), and SSH from previous labs. Your Docker lab environment is running and your Kali terminal is ready.
 
 ## Scenario
 

@@ -93,7 +93,7 @@ Make sure the following are in place before beginning Exercise 8.1:
 - [ ] You are comfortable using `smbclient` to connect to shares and retrieve files
 - [ ] You understand how CrackMapExec tests credentials against a target
 - [ ] You know the basics of RDP and SSH connectivity from earlier chapters
-- [ ] Your VPN is connected and your terminal is open
+- [ ] Your Docker lab environment is running and your terminal is open
 - [ ] You have a Kali Linux terminal with CrackMapExec, smbclient, xfreerdp, and ldapsearch available
 - [ ] You have verified connectivity to the target by pinging it or running a quick Nmap scan
 

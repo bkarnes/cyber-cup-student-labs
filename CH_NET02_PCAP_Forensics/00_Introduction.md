@@ -92,7 +92,7 @@ and document your findings.
 Confirm the following before beginning any lab in this chapter:
 
 - [ ] Completed Chapter N1 (Log Analysis)
-- [ ] VPN connected and verified
+- [ ] Docker lab environment is running and your terminal is open
 - [ ] Terminal open with SSH client available
 - [ ] tshark installed (`tshark --version` to verify)
 

@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-- Confirm your VPN connection to the lab environment is active
+- Confirm your Docker lab environment is running
 - Open a terminal window on your attack machine
 - Verify SSH is available by running `ssh -V`
 - Have your notebook ready to record findings

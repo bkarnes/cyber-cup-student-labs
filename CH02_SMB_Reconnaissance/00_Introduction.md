@@ -88,6 +88,6 @@ Do not memorize all of the commands right now. Each lab walkthrough explains the
 Make sure the following are in place before beginning Exercise 2.1:
 
 - [ ] You have completed Chapter 1 (Enumeration) and can run Nmap scans confidently
-- [ ] Your VPN is connected and working
+- [ ] Your Docker lab environment is running and your terminal is open
 - [ ] You have a terminal open on your Kali Linux VM
 - [ ] You have verified connectivity to the lab network

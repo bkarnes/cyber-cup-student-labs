@@ -4,7 +4,7 @@
 
 In Exercise 2.1, you connected to the SMB service and saw a basic share listing. this exercise presents a target with more shares; each one representing a different type of data that an organization might expose. Your job is to enumerate all of them, understand what the share names and types tell you, and assess the security implications.
 
-Your VPN must be connected and your terminal open. You should be comfortable running `smbclient` from the previous exercise.
+Your Docker lab environment is running and your terminal is open. You should be comfortable running `smbclient` from the previous exercise.
 
 ## Scenario
 

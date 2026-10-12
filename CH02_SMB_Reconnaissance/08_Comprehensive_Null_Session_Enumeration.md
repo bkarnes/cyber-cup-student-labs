@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-Over the past three labs (2.5-2.7), you performed null session enumeration one capability at a time: server info, shares, and users. In practice, penetration testers run all of these at once using automated tools. this exercise introduces **enum4linux**: a tool that wraps every manual rpcclient command you have learned into a single automated pass. Your VPN must be connected and your terminal open.
+Over the past three labs (2.5-2.7), you performed null session enumeration one capability at a time: server info, shares, and users. In practice, penetration testers run all of these at once using automated tools. this exercise introduces **enum4linux**: a tool that wraps every manual rpcclient command you have learned into a single automated pass. Your Docker lab environment is running and your terminal is open.
 
 ## Scenario
 

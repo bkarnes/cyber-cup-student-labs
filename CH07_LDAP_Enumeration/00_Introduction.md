@@ -97,7 +97,7 @@ graph LR
 Make sure the following are in place before beginning Exercise 7.1:
 
 - [ ] You have completed Chapters 1 through 6 and are comfortable running Nmap scans and working from the command line
-- [ ] Your VPN is connected and working
+- [ ] Your Docker lab environment is running and your terminal is open
 - [ ] You have a terminal open on your Kali Linux VM
 - [ ] You have verified connectivity to the lab network
 - [ ] You understand that LDAP is a directory query protocol, not a file-sharing protocol; you are reading a database, not browsing folders

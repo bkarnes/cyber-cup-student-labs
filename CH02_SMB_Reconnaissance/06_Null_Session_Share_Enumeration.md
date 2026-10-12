@@ -4,7 +4,7 @@
 
 In Exercise 2.5, you established a null session and used `srvinfo` to pull basic server information. But null sessions can do much more. this exercise uses the same connection to enumerate shares through the RPC interface; and the results may reveal information that `smbclient -L` did not show.
 
-Your VPN must be connected and your terminal open. You should be comfortable establishing a null session with `rpcclient` from the previous exercise.
+Your Docker lab environment is running and your terminal is open. You should be comfortable establishing a null session with `rpcclient` from the previous exercise.
 
 ## Scenario
 

@@ -2,7 +2,7 @@
 
 ## Before You Begin
 
-In Exercise 1.3, you identified the exact software running on each port. Version detection told you WHAT software is there. OS detection tells you WHAT platform it runs on; which narrows down which exploits, privilege escalation techniques, and post-exploitation tools apply. this exercise also introduces a new requirement: you need root privileges to run the scan. Your VPN must be connected and your terminal open.
+In Exercise 1.3, you identified the exact software running on each port. Version detection told you WHAT software is there. OS detection tells you WHAT platform it runs on; which narrows down which exploits, privilege escalation techniques, and post-exploitation tools apply. this exercise also introduces a new requirement: you need root privileges to run the scan. Your Docker lab environment is running and your terminal is open.
 
 ## Scenario
 

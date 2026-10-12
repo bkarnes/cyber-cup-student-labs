@@ -78,7 +78,7 @@ Do not memorize all of the flags right now. Each lab walkthrough explains the sp
 
 Make sure the following are in place before beginning Exercise 1.1:
 
-- [ ] You are logged into the Open Cyber Range platform
-- [ ] Your VPN is connected and working (download your WireGuard config from the platform and connect before starting)
+- [ ] You are working locally with the Black‑Hat‑Bash lab containers (no external platform login required)
+- [ ] Docker environment is running (`docker compose up -d`) and your terminal is open
 - [ ] You have a terminal open (Kali Linux VM recommended)
-- [ ] You have verified VPN connectivity by pinging a known address (`ping 10.0.0.1`)
+- [ ] You have verified connectivity to a lab container (e.g., `ping 10.0.0.1` or any container IP)
