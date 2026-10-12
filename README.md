@@ -2,7 +2,21 @@
 
 ## What Is a Workbook?
 
-The User Manual explains how the platform works. The Workbook walks you through the actual labs; what to type, what the output means, where to record your findings, and why each step matters. Think of it as a guided companion that sits next to you while you work through each exercise.
+The workbook now includes three additional lab services that are required for the **Network Analysis**, **PCAP Forensics**, and **Firewall** chapters:
+
+- **Log Collector** (`blackhat_log_collector`): pulls `/var/log/` from each Black‑Hat‑Bash service container into a shared volume so CH_NET01 can analyse real log files.
+- **PCAP Capture** (`blackhat_pcap_capture`): runs a traffic generator then captures the traffic in `labs/pcap/lab_traffic.pcap`. CH_NET02 uses this consistent PCAP for all forensic exercises.
+- **Firewall Sandbox** (`blackhat_firewall`): an iptables‑enabled container with NET_ADMIN capability where CH_NETSY12 teaches firewall rule creation and monitoring.
+
+> **Important:** These containers rely on the original Black‑Hat‑Bash lab images (SMB, RDP, LDAP, and the various Linux/Windows services). Before launching the workbook, clone the Black‑Hat‑Bash repository next to the `student-labs` directory and ensure its Dockerfiles are available:
+
+```bash
+# From the project root
+git clone https://github.com/blackhatbash/Black-Hat-Bash.git
+```
+
+The provided `docker-compose.yml` in `student-labs/labs/` will automatically build and link the new lab helpers with the Black‑Hat‑Bash services.
+
 
 Each chapter covers one level of the Windows track. Inside each chapter, every lab is presented as a self-contained walkthrough with:
 
@@ -14,7 +28,12 @@ Each chapter covers one level of the Windows track. Inside each chapter, every l
 
 ---
 
-## How the Workbook Is Structured
+## Using the Black‑Hat‑Bash Labs
+
+All Windows‑focused chapters (CH01‑CH09) target services that are provided by the **Black‑Hat‑Bash** Docker environment. The web‑recon and web‑exploitation chapters (`CH_WEB01_Web_Reconnaissance` and `CH_WEB02_Web_Exploitation`) can be run against the `p-web-01` (simple Apache/Flask) and `p-web-02` (WordPress) containers that are part of the Black‑Hat‑Bash repo.
+
+The network‑analysis, PCAP‑forensics, and firewall chapters now use the additional helper containers described above.
+
 
 The Windows track has 51 labs across 9 levels. Each level becomes one chapter in the workbook:
 
