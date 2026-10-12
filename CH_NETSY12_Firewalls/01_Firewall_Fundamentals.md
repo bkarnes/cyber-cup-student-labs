@@ -1,8 +1,11 @@
 # Exercise 12.1: Firewall Fundamentals - Controlling Inbound Traffic
 
+**New lab environment:** This exercise now runs against the `firewall_sandbox` Docker container defined in `student-labs/labs/docker-compose.yml`. The container provides an iptables‑based firewall you can SSH into and modify. All traffic between the Apex dev server and the web server passes through this sandbox, so your rule changes are reflected in real time.
+
 ## Before You Begin
 
 You should be comfortable with basic Linux commands and SSH. Your VPN must be connected and your terminal open. The exercise introduces firewall concepts from the operator's perspective: you will be working directly on the firewall, not attacking it.
+
 
 **Credentials for this exercise:**
 

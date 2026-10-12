@@ -28,9 +28,10 @@ Five labs in this chapter teach protocol-specific packet analysis. You will:
 Every lab in this chapter follows the same pattern:
 
 1. SSH into an analyst workstation or Docker container
-2. The PCAP file is pre-positioned in a captures directory
-3. Analysis is performed with tshark (the command-line packet analyzer) directly on the workstation
-4. All analysis can be completed entirely from the terminal
+2. The PCAP file is pre‑positioned in the shared `labs/pcap/` directory of the repository (path: `../labs/pcap/lab_traffic.pcap`).
+3. Analysis is performed with `tshark` (the command‑line packet analyzer) directly on the workstation.
+4. All analysis can be completed entirely from the terminal.
+
 
 > **Note:** tshark uses the same display filter syntax as Wireshark, so if you are
 > familiar with Wireshark's GUI, the filter expressions are identical. These labs

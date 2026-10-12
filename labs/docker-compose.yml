@@ -36,6 +36,67 @@ services:
     ports:
       - "389:389"
 
+  # ---------- New services ----------
+  log_collector:
+    build:
+      context: ./log_collector
+    container_name: blackhat_log_collector
+    volumes:
+      - log-data:/logs
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - labnet
+
+  traffic_gen:
+    build:
+      context: ./traffic_gen
+    container_name: blackhat_traffic_gen
+    networks:
+      - labnet
+    depends_on:
+      - smb
+      - rdp
+      - ldap
+
+  pcap_capture:
+    build:
+      context: ./pcap_capture
+    container_name: blackhat_pcap_capture
+    volumes:
+      - ./pcap:/captures
+    networks:
+      - labnet
+    depends_on:
+      - traffic_gen
+    command: ["-i","any","-w","/captures/lab_traffic.pcap","-c","200"]
+
+  pcap_viewer:
+    build:
+      context: ./pcap_viewer
+    container_name: blackhat_pcap_viewer
+    volumes:
+      - ./pcap:/pcap
+    networks:
+      - labnet
+    tty: true
+
+  firewall_sandbox:
+    build:
+      context: ./firewall_sandbox
+    container_name: blackhat_firewall
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - firewall-logs:/var/log/iptables
+    networks:
+      - labnet
+    tty: true
+
 networks:
   labnet:
     driver: bridge
+
+volumes:
+  log-data:
+  firewall-logs:
+

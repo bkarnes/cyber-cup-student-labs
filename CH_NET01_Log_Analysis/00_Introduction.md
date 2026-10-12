@@ -41,9 +41,9 @@ transfer directly to the graphical interface.
 
 ## How the Labs Are Structured
 
-Three labs (1.1, 1.3, 1.4) download plain-text log files via curl and analyze them
-with grep/awk pipelines. One lab (1.2) downloads a PCAP file via curl and analyzes
-it with tshark. All four labs can be completed entirely from the command line.
+All log files are pre‑collected by the **`log_collector`** service. When you start the container (`docker compose run --rm log_collector`), it pulls the `/var/log/` directories from each Black‑Hat‑Bash host container and stores them under `/logs/<container>/`. The exercises simply `curl` (or `cat`) those files from the shared volume.
+
+Three labs (1.1, 1.3, 1.4) work with plain‑text logs located in `/logs/<target>/`. Lab 1.2 still uses a PCAP file that is provided in the `labs/pcap/` directory.
 
 ```mermaid
 graph LR
