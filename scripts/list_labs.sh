@@ -69,7 +69,7 @@ printf "| Project | Service | Container | Networks (IP) |\n"
 printf "|---------|---------|-----------|----------------|\n"
 
 # Student labs
-collect_info "$HOME/Projects/student-labs/labs/docker-compose.yml" "student‑labs"
+collect_info "$HOME/Projects/cyber-cup-student-labs/labs/docker-compose.yml" "student‑labs"
 # Black‑Hat‑Bash labs (external path)
 BHBDIR="$HOME/Projects/Black-Hat-Bash/lab"
 collect_info "$BHBDIR/docker-compose.yml" "Black‑Hat‑Bash"
