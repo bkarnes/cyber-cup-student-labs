@@ -35,29 +35,20 @@ collect_info() {
         if [[ -z "$cid" ]]; then
             continue
         fi
-        # Raw inspection: container name and each network's IP (with network ID)
-        raw=$(docker inspect -f '{{ .Name }} {{range .NetworkSettings.Networks}}{{.NetworkID}}:{{.IPAddress}} {{end}}' "$cid")
-        # Map network IDs to network names for this container
-        map=$(docker inspect -f '{{range $k,$v := .NetworkSettings.Networks}}{{$k}}:{{$v.NetworkID}} {{end}}' "$cid")
-        # Build readable network->IP pairs
-        readable=$(echo "$raw $map" | awk '
+        # Use Docker's network‑name aware format: container name + "network:IP" pairs
+        raw=$(docker inspect -f '{{ .Name }} {{range $net,$conf := .NetworkSettings.Networks}}{{$net}}:{{$conf.IPAddress}} {{end}}' "$cid")
+        # Build readable network→IP list with awk
+        readable=$(echo "$raw" | awk -v proj="$project_name" -v svc="$service" '
             {
                 container=$1;
-                for(i=2;i<=NF;i++) raw[i-1]=$i;
-                raw_cnt=NF;
-                split_point=raw_cnt;
-                for(i=1;i<=raw_cnt;i++) {
-                    if(index(raw[i],":") && length(raw[i])>30) { split_point=i-1; break }
-                }
-                for(i=split_point+1;i<=raw_cnt;i++) {
-                    split(split[i],":"); id_to_name[split[i][2]]=split[i][1];
-                }
                 out="";
-                for(i=1;i<=split_point;i++) {
-                    split(raw[i],":"); net_id=split[2]; ip=split[3]; net_name=id_to_name[net_id]; if(net_name=="") net_name="unknown";
-                    out = out (out==""?"":", ") net_name " → " ip;
+                for(i=2;i<=NF;i++) {
+                    split($i, parts, ":");
+                    if(parts[2] != "") {
+                        out = out (out==""?"":", ") parts[1] " → " parts[2];
+                    }
                 }
-                printf "| %s | %s | %s | %s |\n", "'$project_name'", $2, substr(container,2), out;
+                printf "| %s | %s | %s | %s |\n", proj, svc, substr(container,2), out;
             }
         ')
         echo "$readable"
@@ -68,7 +59,7 @@ collect_info() {
 printf "| Project | Service | Container | Networks (IP) |\n"
 printf "|---------|---------|-----------|----------------|\n"
 
-# Student labs
+# Student labs (adjusted for actual repo name)
 collect_info "$HOME/Projects/cyber-cup-student-labs/labs/docker-compose.yml" "student‑labs"
 # Black‑Hat‑Bash labs (external path)
 BHBDIR="$HOME/Projects/Black-Hat-Bash/lab"
